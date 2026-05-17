@@ -325,7 +325,7 @@ Output:
 - max 3 bullets.
 ```
 
-# Step 11 — Create One Intentional Failure
+# Step 10 — Create One Intentional Failure
 
 This step proves that the tests protect real behavior.
 
@@ -361,7 +361,7 @@ git diff
 git restore .
 ```
 
-# Step 12 — Add the Azure DevOps Pipeline
+# Step 11 — Add the Azure DevOps Pipeline
 
 Ask Copilot to create the pipeline.
 
@@ -383,7 +383,7 @@ Publish test results to Azure DevOps.
 Use DotNetCoreCLI@2 and the minimal set of commands and tasks required.
 ```
 
-# Step 13 — Commit and Push
+# Step 12 — Commit and Push
 
 Run:
 
