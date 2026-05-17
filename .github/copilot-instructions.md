@@ -27,6 +27,7 @@ Output control:
 ## Azure DevOps YAML Generation Rules
 
 When generating Azure DevOps YAML files, use the following structure:
+Use publishTestResults: true; don’t add --logger trx or --results-directory.
 
 ```yaml
 trigger:

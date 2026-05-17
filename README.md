@@ -223,6 +223,7 @@ Prompt:
 Create exactly one C# Playwright NUnit test.
 Test name:
 CartFlow_Should_Add_Product_To_Cart
+Ensure the cart is empty.
 
 Scenario:
 - Open BaseUrl.
