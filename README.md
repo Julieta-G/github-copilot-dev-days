@@ -201,8 +201,6 @@ Rules:
 - Do not create other tests.
 - Keep the test short.
 
-Install Playwright browsers to run the tests.
-
 Output:
 - changed file path
 - test command

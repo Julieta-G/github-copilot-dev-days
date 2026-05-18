@@ -28,6 +28,7 @@ Output control:
 
 When generating Azure DevOps YAML files, use the following structure:
 Use publishTestResults: true; don’t add --logger trx or --results-directory.
+Do not use: arguments: '-- TestRunParameters.Parameter(name="BASE_URL",value="$(webUiCaUrl)")'
 
 ```yaml
 trigger:

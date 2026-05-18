@@ -9,6 +9,10 @@
 # VS Code workspace settings
 .vscode/
 
+# Playwright MCP local runtime/cache
+.playwright-mcp/
+**/.playwright-mcp/
+
 # User-specific files
 *.rsuser
 *.suo
