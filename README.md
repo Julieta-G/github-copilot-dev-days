@@ -212,7 +212,7 @@ Output:
 Run:
 
 ```powershell
-dotnet test .\1_initial_code\test\ShoppingApp.E2ETests\ShoppingApp.E2ETests.csproj --filter ProductSearch
+dotnet test .\1_initial_code\test\ShoppingApp.E2ETests\ShoppingApp.E2ETests.csproj --filter ProductSearch_Should_Filter_Products
 ```
 
 # Step 7 — Add the Cart Flow Test
@@ -252,7 +252,7 @@ Output:
 Run:
 
 ```powershell
-dotnet test .\1_initial_code\test\ShoppingApp.E2ETests\ShoppingApp.E2ETests.csproj --filter CartFlow
+dotnet test .\1_initial_code\test\ShoppingApp.E2ETests\ShoppingApp.E2ETests.csproj --filter CartFlow_Should_Add_Product_To_Cart
 ```
 
 # Step 8 — Add the Short Checkout Flow Test
@@ -292,7 +292,7 @@ Output:
 Run:
 
 ```powershell
-dotnet test .\1_initial_code\test\ShoppingApp.E2ETests\ShoppingApp.E2ETests.csproj --filter CheckoutFlow
+dotnet test .\1_initial_code\test\ShoppingApp.E2ETests\ShoppingApp.E2ETests.csproj --filter CheckoutFlow_Should_Complete_Short_Happy_Path
 ```
 
 # Step 9 — Debug Failed Tests with MCP
