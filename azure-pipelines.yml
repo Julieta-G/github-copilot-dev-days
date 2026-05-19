@@ -1,0 +1,32 @@
+trigger:
+- feature
+
+stages:
+- stage: Launch_End_To_End_Testing
+  displayName: Launch end-to-end testing stage
+  variables:
+    webUiCaUrl: 'http://127.0.0.1:5169'
+  jobs:
+  - job: Run_End_To_End_Tests
+    displayName: Run ShoppingApp.E2ETests
+    pool:
+      name: Windows-Playwright-Agents
+      demands:
+      - Agent.Name -equals WIN-PLAYWRIGHT-01
+    steps:
+    - checkout: self
+
+    - task: DotNetCoreCLI@2
+      displayName: Build ShoppingApp.E2ETests
+      inputs:
+        command: build
+        projects: '$(Build.SourcesDirectory)/test/ShoppingApp.E2ETests/ShoppingApp.E2ETests.csproj'
+
+    - task: DotNetCoreCLI@2
+      displayName: Run ShoppingApp.E2ETests
+      inputs:
+        command: test
+        projects: '$(Build.SourcesDirectory)/test/ShoppingApp.E2ETests/ShoppingApp.E2ETests.csproj'
+        publishTestResults: true
+      env:
+        BASE_URL: $(webUiCaUrl)
